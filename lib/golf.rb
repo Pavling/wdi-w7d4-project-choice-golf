@@ -9,5 +9,9 @@ class Golf
       s[0] ? s : i
     }
   end
-  
+
+  def self.hole2(v)
+    v.split.reduce('') { |m, e| m << e[0] }
+  end
+
 end
