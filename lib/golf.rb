@@ -1,17 +1,17 @@
 class Golf
   
-  def self.hole1(v)
+  def self.hole1 v
     (1..v).map { |i|
-      s = ""
-      s << "pling" if i % 3 < 1
-      s << "plang" if i % 5 < 1
-      s << "plong" if i % 7 < 1
-      s[0] ? s : i
+      i % 3 < 1 && s = 'pling'
+
+      s="#{s}plang" if i % 5 < 1
+      s="#{s}plong" if i % 7 < 1
+      s || i
     }
   end
 
-  def self.hole2(v)
-    v.split.reduce('') { |m, e| m << e[0] }
+  def self.hole2 v
+    v.split.map { |e| e[0] }*''
   end
 
 end
