@@ -8,7 +8,7 @@ class Golf
   end
 
   def self.hole2 v
-    v.split.map { |e| e[0] }*''
+    v.scan(/\b\w/)*''
   end
 
 end
